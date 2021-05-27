@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<title>Facetrack-CSS</title>
+<style>
+	@import url("./cube.css");
+
+	#detector {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+	}
+	#outline, #nose, #chin {
+		position: absolute;
+		transition: top 0.5s,left 0.5s,width 0.5s,height 0.5s;
+		border: 2px solid red;
+	}
+
+	#content {
+	  transition: transform 0.04s;
+		transform-origin: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		font-size: 10vmin;
+		background-repeat: repeat;
+		//background-image: url(./background.svg);
+	}
+
+	#about {
+		position: fixed;
+		bottom: 0px;
+	}
+</style>
+<section id="detector">
+	<video id="video" autoplay="true"></video>
+	<div id="outline"></div>
+  <div id="nose"></div>
+  <div id="chin"></div>
+</section>
+<section id="content">
+	😁
+<!--
+<div class="cube rotation-y" style="
+    --width: 546px; 
+    --height: 186px; 
+    --depth: 100px; 
+    --easing: linear;
+    --duration: 4s;
+    font-size: 1.5rem;">
+
+    <div class="cube-face cube-face-front" style="background-color: rgba(152, 211, 120, 0.9)">Front</div>
+    <div class="cube-face cube-face-back" style="background-color: rgba(120, 210, 211, 0.9)">Back</div>
+    <div class="cube-face cube-face-left" style="background-color: rgba(161, 120, 211, 0.9)">Left</div>
+    <div class="cube-face cube-face-right" style="background-color: rgba(120, 169, 211, 0.9)">Right</div>
+    <div class="cube-face cube-face-top" style="background-color: rgba(120, 143, 211, 0.9)">Top</div>
+    <div class="cube-face cube-face-bottom" style="background-color: rgba(120, 211, 172, 0.9)">Bottom</div>
+</div>
+-->
+</section>
+<section id="about">
+  <p>
+	This page uses your webcam and CSS3D transforms to make the smiley face move around.
+	</p>
+	<p>
+		Face tacking is done using <a href="https://github.com/justadudewhohacks/face-api.js">Face-API.js</a>.
+	  Check out the source code on <a href="https://github.com/RangerMauve/facetrack-css">GitHub</a>
+  </p>
+</section>
+<script type="module" src="script.js"></script>
