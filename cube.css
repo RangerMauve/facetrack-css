@@ -9,7 +9,7 @@ html, body{
     background: #fff;
     color: #111;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     perspective: 2000px;
     overflow: none;
 }
